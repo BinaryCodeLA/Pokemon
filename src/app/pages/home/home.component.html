@@ -1,0 +1,38 @@
+
+<div class="container" >
+    <!-- Highlight Card -->
+    <div class="row">  
+        <div class="col-xs-12">
+              <!-- Resources -->
+            <h2>POKEPLACE</h2>
+            <p>Here are some links to help you get started:</p>
+        </div>
+    </div>
+
+  
+
+    <div class="card-container">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-6 col-md-4 mb-5 card-big-shadow" *ngFor="let pokemon of PokeElments">
+                <div class="card h-100 pt-3 card card-just-text" data-background="color" data-color="yellow" data-radius="none">                  
+                        <img src="{{pokemon.image}}" class="card-img"
+                        alt="Fissure in Sandstone" />               
+                    
+                    <div class="card-body content">
+                        <h5 class="card-title">{{pokemon.name}}</h5>
+                        <ul class="list-types justify-content-center">
+                            <li class="category" *ngFor="let cat of pokemon.types">
+                                <span class="card-detail-badge">{{cat.poketype}}</span>
+                            </li>
+                        </ul>                       
+                        <button type="button" class="btn btn-success btn-rounded" routerLink="detail/{{pokemon.id}}">View</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-3 mb-5">
+                <button id="btn-more" class="btn btn-success btn-rounded" (click) = "LoadMore()">Load More</button>
+                <a href="javascript:" id="return-to-top" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }"><i class="icon-chevron-up"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
