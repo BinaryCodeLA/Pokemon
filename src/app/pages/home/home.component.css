@@ -5,6 +5,10 @@ h2 {
 .title-page {
     padding-left: 2em;
 }
+.who-pok {
+    font-size: 1.2em;
+    font-weight: 600;
+}
 .container {
     max-width: 100%;
 }
