@@ -1,1 +1,39 @@
-<p>detail works!</p>
+<div class="container" >
+    <!-- Highlight Card -->
+    <div class="row">  
+        <div class="col-xs-12 title-page">
+              <!-- Resources -->
+            <h2>POKEPLACE</h2>
+            <button type="button" class="btn btn-success btn-rounded" routerLink="/"><i class="icon-angle-left"></i></button>
+        </div>
+    </div> 
+
+    <div class="card-container">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 mb-5 card-big-shadow">
+                <div class="card  pt-3 card-just-text">                  
+                        <img src="{{PokemonImage}}" class="card-img"
+                        alt="Fissure in Sandstone" />               
+                    
+                    <div class="card-body content">
+                        <h5 class="card-title">{{PokemonName}}</h5>
+                        <span class="title-ab">Abilities:</span>
+                        <p class="description-pok">{{PokemonDescription}}</p>
+                        <span class="title-ab">Category:</span>
+                        <ul class="list-types justify-content-center">
+                            <li class="category" *ngFor="let cat of PokemonType">
+                                <span class="card-detail-badge">{{cat.poketype}}</span>
+                            </li>
+                        </ul>                       
+                        <!-- <button type="button" class="btn btn-success btn-rounded" routerLink="detail/{{pokemon.id}}">View</button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-xs-12 col-sm-12 col-md-12 mt-3 mb-5">
+                <button id="btn-more" class="btn btn-success btn-rounded" (click) = "LoadMore()">Load More</button>
+                <a href="javascript:" id="return-to-top" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }"><i class="icon-chevron-up"></i></a>
+            </div> -->
+        </div>
+    </div>
+</div>
+

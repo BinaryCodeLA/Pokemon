@@ -29,15 +29,11 @@ export class HomeComponent implements OnInit {
       response.forEach(element => {
         this.PokeElments.push(element) 
       });
-            
-      console.log("this.PokeElments=> ", this.PokeElments)
-     
     }).catch((error)=>console.log("Error: ", error))       
     
   }
   async LoadMore(){
     this.PokeNext = this.PokeElments[this.PokeElments.length -1 ].id
-    console.log("PokeNext: ", this.PokeNext) 
     this.GetData();
   }
   scrollToTop(): void {

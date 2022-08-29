@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-color: #fafafa;
+    background-image: url("assets/images/container_bg.png");
+                    background-size: 150px;
+                    background-repeat: repeat;
 }

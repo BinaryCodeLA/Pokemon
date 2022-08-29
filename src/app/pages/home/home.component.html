@@ -2,7 +2,7 @@
 <div class="container" >
     <!-- Highlight Card -->
     <div class="row">  
-        <div class="col-xs-12">
+        <div class="col-xs-12 title-page">
               <!-- Resources -->
             <h2>POKEPLACE</h2>
             <p>Here are some links to help you get started:</p>
@@ -24,9 +24,12 @@
                             <li class="category" *ngFor="let cat of pokemon.types">
                                 <span class="card-detail-badge">{{cat.poketype}}</span>
                             </li>
-                        </ul>                       
+                        </ul>
+                    </div> 
+                    <div class="card-footer">                   
                         <button type="button" class="btn btn-success btn-rounded" routerLink="detail/{{pokemon.id}}">View</button>
-                    </div>
+                    </div>   
+                    
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mt-3 mb-5">

@@ -35,12 +35,16 @@
     background-color: #1976d2;
     color: white;
     font-weight: 600;
+    padding-right: 2em;
   }
 
   .toolbar img {
     margin: 0 16px;
   }
-
+  .toolbar span{
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
   .toolbar #twitter-logo {
     height: 40px;
     margin: 0 8px;
@@ -75,24 +79,30 @@
   }
 
   footer {
-    margin-top: 8px;
     display: flex;
     align-items: center;
     line-height: 20px;
     position:fixed;
     bottom: 0;
     width: 100%;
-    background-color: #FFFFFF;
-    padding-top: 2em;
+    background-color: #FF635CBF;
+    color:#FFFFFF;
+    padding-top: 1em;
+    padding-bottom: 1em;
     border:1px solid #ccc;
     z-index: 99;
+    padding-left: 1em;
   }
 
   footer a {
     display: flex;
     align-items: center;
   }
-
+  footer .icon-github::before {
+    content: "\f09b";
+    font-size: 2em;
+    color: #FFFFFF;
+  }
   .github-star-badge {
     color: #24292e;
     display: flex;
@@ -140,5 +150,27 @@
     svg#rocket-smoke {
       display: none;
       visibility: hidden;
+    }
+  }
+
+  @media only screen and (max-width:768px) {
+    .content {
+       padding: 0;
+       max-width: 100%;
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      line-height: 20px;
+      position:fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #FF635CBF;
+      color:#FFFFFF;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      border:1px solid #ccc;
+      z-index: 99;
+      padding-left: 0.2em;
     }
   }
