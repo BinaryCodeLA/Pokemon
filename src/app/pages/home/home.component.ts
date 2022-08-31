@@ -11,7 +11,7 @@ import { PokemonService } from '../../services/pokemon.service';
 export class HomeComponent implements OnInit {
   PokeResults:any
   PokeElments:any = []
-  PokeNext:number = 1
+  PokeNext:number = 0
   windowScrolled = false;
 
   constructor(private pokemon: PokemonService) {  }
